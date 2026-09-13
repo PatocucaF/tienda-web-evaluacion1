@@ -3,42 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Tienda Web</title>
+    <title>Registro de Cliente - TechVerse</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Mi Tienda Web</h1>
+        <div class="logo">
+            <h1>TechVerse</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="registro.html">Registro</a></li>
+                <li><a href="registro.html">Crear Cuenta</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="banner">
-            <article>
-                <h2>¡Únete a nuestra tienda!</h2>
-                <p>Crea tu cuenta para disfrutar de grandes ofertas y promociones exclusivas.</p>
-            </article>
-        </section>
-
         <section class="formulario-container">
-            <h2>Formulario de Registro</h2>
+            <h2>Crea tu cuenta en TechVerse</h2>
+            <p class="form-subtitle">Regístrate para acumular puntos, recibir descuentos exclusivos y gestionar tus compras.</p>
+            
             <form id="form-registro" novalidate>
                 
                 <div class="input-group">
                     <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Juan Pérez" required>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Fernando Silva" required>
                     <span class="error-msg" id="error-nombre"></span>
                 </div>
 
                 <div class="input-group">
+                    <label for="rut">RUT:</label>
+                    <input type="text" id="rut" name="rut" placeholder="Ej: 12345678-9" required>
+                    <span class="error-msg" id="error-rut"></span>
+                </div>
+
+                <div class="input-group">
                     <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" autocomplete="email" placeholder="correo@ejemplo.com" required>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="correo@ejemplo.cl" required>
                     <span class="error-msg" id="error-email"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="telefono">Teléfono de Contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="Ej: 912345678" required>
+                    <span class="error-msg" id="error-telefono"></span>
                 </div>
 
                 <div class="input-group">
@@ -47,13 +56,14 @@
                     <span class="error-msg" id="error-password"></span>
                 </div>
 
-                <button type="submit" id="btn-enviar">Registrarse</button>
+                <button type="submit" id="btn-enviar">Crear Mi Cuenta</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Mi Tienda Web. Todos los derechos reservados.</p>
+        <p>&copy; 2026 TechVerse SpA - Todos los derechos reservados.</p>
+        <p>Atención al cliente: contacto@techverse.cl | Santiago, Chile</p>
     </footer>
 
     <script src="js/script.js"></script>

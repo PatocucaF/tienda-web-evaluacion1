@@ -2,12 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f4f6f9;
-    color: #333;
+    background-color: #0f172a;
+    color: #f8fafc;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,15 +15,17 @@ body {
 
 header {
     background-color: #1e293b;
-    color: #fff;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #38bdf8;
 }
 
-header h1 {
-    font-size: 1.5rem;
+.logo h1 {
+    color: #38bdf8;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -33,9 +35,10 @@ nav ul {
 }
 
 nav a {
-    color: #fff;
+    color: #f8fafc;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -43,36 +46,42 @@ nav a:hover {
 }
 
 main {
-    max-width: 800px;
+    max-width: 850px;
     width: 90%;
     margin: 2rem auto;
     flex: 1;
 }
 
-.banner {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.banner img, .video-section video {
-    margin-top: 1rem;
-    border-radius: 6px;
-    max-width: 100%;
-}
-
-.formulario-container {
-    background: #ffffff;
+.banner, .video-section, .formulario-container {
+    background-color: #1e293b;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
 }
 
-.formulario-container h2 {
-    margin-bottom: 1.5rem;
+.banner h2, .video-section h3, .formulario-container h2 {
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+}
+
+.banner p, .video-section p, .form-subtitle {
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.video-section video {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
 .input-group {
@@ -82,24 +91,27 @@ main {
 label {
     display: block;
     margin-bottom: 0.4rem;
-    font-weight: bold;
+    color: #cbd5e1;
+    font-weight: 600;
 }
 
 input {
     width: 100%;
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.75rem;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: #fff;
+    border-radius: 6px;
     font-size: 1rem;
 }
 
 input:focus {
     outline: none;
-    border-color: #0284c7;
+    border-color: #38bdf8;
 }
 
 .error-msg {
-    color: #dc2626;
+    color: #f87171;
     font-size: 0.85rem;
     display: block;
     margin-top: 0.3rem;
@@ -109,11 +121,14 @@ button {
     background-color: #0284c7;
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
+    padding: 0.85rem;
+    border-radius: 6px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -122,8 +137,13 @@ button:hover {
 
 footer {
     background-color: #1e293b;
-    color: #fff;
+    color: #94a3b8;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #334155;
+}
+
+footer p {
+    margin-bottom: 0.3rem;
 }
